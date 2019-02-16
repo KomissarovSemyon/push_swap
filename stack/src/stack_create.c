@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.h                                            :+:      :+:    :+:   */
+/*   stack_create.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 00:06:15 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/17 01:55:32 by amerlon-         ###   ########.fr       */
+/*   Created: 2019/02/17 01:39:46 by amerlon-          #+#    #+#             */
+/*   Updated: 2019/02/17 01:52:38 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
+#include "stack.h"
 
-# include <stdlib.h>
-
-typedef struct		s_stack
+t_stack	*stack_create(int *ar, size_t n)
 {
-	int				value;
-	struct s_stack	*next;
-}					t_stack;
+	t_stack	*now;
+	t_stack	*res;
+	size_t	i;
 
-t_stack				*stack_new(int val);
-t_stack				*stack_create(int *ar, size_t n);
-void				stack_delone(t_stack **node);
-void				stack_del(t_stack **head);
-t_stack				*stack_push(t_stack **head, t_stack *el);
-t_stack				*stack_pop(t_stack **head);
-
-#endif
+	if (!ar || !n)
+		return (NULL);
+	i = -1;
+	res = NULL;
+	while (++i < n)
+	{
+		if (!(now = stack_new(ar[i])))
+		{
+			stack_del(&res);
+			return (NULL);
+		}
+		res = stack_push(&res, now);
+	}
+	return (res);
+}

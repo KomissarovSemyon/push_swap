@@ -6,7 +6,7 @@
 #    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/16 23:59:15 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 01:38:58 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/17 01:53:29 by amerlon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ SRC_DIR = ./src
 
 SRC =	stack_new.c \
 		stack_delone.c \
-		stack_del.c
+		stack_del.c \
+		stack_push.c \
+		stack_create.c
 
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 
