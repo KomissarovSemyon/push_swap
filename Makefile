@@ -6,7 +6,7 @@
 #    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/27 05:01:06 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 02:23:12 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/17 05:35:31 by amerlon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC_DIR 	= ./src
 INC_DIR 	= ./inc
 OBJ_DIR 	= ./obj
 
-SRC			=
+SRC			=	operations.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a
@@ -57,6 +57,7 @@ re: fclean all
 
 norm:
 	@make -C libft norm
+	@make -C stack norm
 	@norminette $(SRC_DIR) $(INC_DIR)
 
 main:
