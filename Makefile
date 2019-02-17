@@ -6,7 +6,7 @@
 #    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/27 05:01:06 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 05:35:31 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/17 06:44:7 by amerlon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ SRC_DIR 	= ./src
 INC_DIR 	= ./inc
 OBJ_DIR 	= ./obj
 
-SRC			=	operations.c
+SRC			=	operations.c \
+				ps_main.c \
+				data_preprocessing.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a
@@ -36,9 +38,8 @@ $(LIBFT):
 $(STACK):
 	@make -C stack
 
-$(NAME): $(OBJ_DIR) $(LIBFT) $(STACK) $(OBJS)
-	ar rcs $(NAME) $(OBJS) $(LIBFT_DIR)/obj/*.o $(STACK_DIR)/obj/*.o
-	@ranlib $(NAME)
+$(NAME): $(LIBFT) $(STACK) $(OBJ_DIR) $(OBJS)
+	gcc -g $(LIBFT) $(STACK) $(FLAGS) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -o $@
@@ -60,8 +61,4 @@ norm:
 	@make -C stack norm
 	@norminette $(SRC_DIR) $(INC_DIR)
 
-main:
-	gcc -g main.c libftprintf.a -Ilibft/inc -Iinc && ./a.out
-
-
-.PHONY: all clean fclean re norm test retest main
+.PHONY: all clean fclean re norm

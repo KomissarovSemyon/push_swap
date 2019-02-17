@@ -6,7 +6,7 @@
 #    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/16 23:59:15 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 01:53:29 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/17 07:15:34 by amerlon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,5 @@ re: fclean all
 
 norm:
 		@norminette $(SRC_DIR) $(INC_DIR)
-
-main:
-		gcc -g -Iinc main.c libft.a && ./a.out
 
 .PHONY: all clean fclean re norm
