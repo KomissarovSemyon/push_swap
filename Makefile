@@ -21,7 +21,8 @@ OBJ_DIR 	= ./obj
 
 SRC			=	operations.c \
 				ps_main.c \
-				data_preprocessing.c
+				data_preprocessing.c \
+				quick_sort.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a

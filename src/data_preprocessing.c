@@ -6,11 +6,11 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/18 10:14:05 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/18 14:31:20 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "push_swap.h"
 
 static int	norm_atoi(const char *str)
 {
@@ -66,6 +66,15 @@ t_stack	*make_stack(int n, char **arr)
 			return (NULL);
 		}
 	res = stack_create(rev_array(a, n), n);
+	quick_sort(a, 0, n - 1);
+	i = 0;
+	while (++i < n)
+		if (a[i] == a[i - 1])
+		{
+			free(a);
+			stack_del(&res);
+			return (NULL);
+		}
 	free(a);
 	return (res);
 }
