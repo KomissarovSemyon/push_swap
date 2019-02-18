@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
+#    By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/16 23:59:15 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 07:15:34 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/18 10:05:55 by semyonkomis      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRC =	stack_new.c \
 		stack_delone.c \
 		stack_del.c \
 		stack_push.c \
-		stack_create.c
+		stack_create.c \
+		stack_pop.c \
+		stack_pushback.c
 
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 

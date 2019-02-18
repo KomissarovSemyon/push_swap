@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:00:56 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/17 07:18:50 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/18 02:11:14 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "stack.h"
 
 t_stack	*ps_swap(t_stack **head)
 {

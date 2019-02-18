@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_pushback.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:15:05 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/17 05:20:01 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/18 10:06:16 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ t_stack	*stack_pushback(t_stack **head, t_stack *el)
 	while (now)
 		now = now->next;
 	now->next = el;
-	return (head);
+	return (*head);
 }
