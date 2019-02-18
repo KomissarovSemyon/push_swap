@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   data_preprocessing.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/17 07:18:51 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/18 10:14:05 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,23 @@ static int	norm_atoi(const char *str)
 	return (sign * res);
 }
 
+static int	*rev_array(int *a, size_t n)
+{
+	int		tmp;
+	size_t	i;
+
+	if (!a)
+		return (NULL);
+	i = -1;
+	while (++i < n / 2)
+	{
+		tmp = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = tmp;
+	}
+	return (a);
+}
+
 t_stack	*make_stack(int n, char **arr)
 {
 	t_stack	*res;
@@ -48,7 +65,7 @@ t_stack	*make_stack(int n, char **arr)
 			free(a);
 			return (NULL);
 		}
-	res = stack_create(a, n);
+	res = stack_create(rev_array(a, n), n);
 	free(a);
 	return (res);
 }
