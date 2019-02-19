@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 22:20:01 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/19 22:30:10 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int		main(int argc, char **argv)
 {
-	char	**nums;
+	t_stacks	*stacks;
 
-	if (argc == 2)
-	{
-		if (!(nums = ft_strsplit(argv[1], ' ')))
-			return (1);
-	}
+	if (!(stacks = parse_input(argv + 1, argc - 1)))
+		return (1);
 	return (0);
 }

@@ -19,7 +19,7 @@ INC_DIR 	= ./inc
 OBJ_DIR 	= ./obj
 
 SRC			=	ps_main.c \
-				data_preprocessing.c \
+				parse_input.c \
 				quick_sort.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))

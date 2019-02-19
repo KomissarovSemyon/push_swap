@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   data_preprocessing.c                               :+:      :+:    :+:   */
+/*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 22:14:07 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/19 22:28:02 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static int	norm_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
-	if ((res > 2147483648 && sign == -1) || (res > 2147483647 && sign == 1))
+	if ((res > 2147483648 && sign == -1) || (res > 2147483647 && sign == 1) ||
+		str[i])
 		return (0);
 	return (sign * res);
 }
@@ -50,4 +51,13 @@ static int	*rev_array(int *a, size_t n)
 		a[n - i - 1] = tmp;
 	}
 	return (a);
+}
+
+t_stacks	*parse_input(char **arr, int n)
+{
+	(void)arr;
+	n = 0;
+	rev_array(NULL, 0);
+	norm_atoi("0");
+	return (NULL);
 }
