@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   data_preprocessing.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 12:14:08 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/19 22:14:07 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,33 +50,4 @@ static int	*rev_array(int *a, size_t n)
 		a[n - i - 1] = tmp;
 	}
 	return (a);
-}
-
-t_stack	*make_stack(int n, char **arr)
-{
-	t_stack	*res;
-	int		*a;
-	int		i;
-
-	if (!(a = (int *)malloc(sizeof(int) * n)))
-		return (NULL);
-	i = -1;
-	while (++i < n)
-		if (!(a[i] = norm_atoi(arr[i])) && arr[i][0] != '0')
-		{
-			free(a);
-			return (NULL);
-		}
-	res = stack_create(rev_array(a, n), n);
-	quick_sort(a, 0, n - 1);
-	i = 0;
-	while (++i < n)
-		if (a[i] == a[i - 1])
-		{
-			free(a);
-			stack_del(&res);
-			return (NULL);
-		}
-	free(a);
-	return (res);
 }

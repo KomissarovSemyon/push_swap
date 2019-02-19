@@ -14,22 +14,16 @@ NAME		= push_swap
 FLAGS		= -Wall -Werror -Wextra
 
 LIBFT_DIR	= ./libft
-STACK_DIR	= ./stack
 SRC_DIR 	= ./src
 INC_DIR 	= ./inc
 OBJ_DIR 	= ./obj
 
-SRC			=	operations.c \
-				ps_main.c \
+SRC			=	ps_main.c \
 				data_preprocessing.c \
-				quick_sort.c \
-				ps_operations_push_and_swaps.c \
-				ps_operations_rotate.c \
-				ps_operations_rev_rotate.c
+				quick_sort.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a
-STACK		= $(STACK_DIR)/libstack.a
 
 all: $(NAME)
 
@@ -39,11 +33,8 @@ $(OBJ_DIR):
 $(LIBFT):
 	@make -C libft
 
-$(STACK):
-	@make -C stack
-
-$(NAME): $(LIBFT) $(STACK) $(OBJ_DIR) $(OBJS)
-	gcc -g $(LIBFT) $(STACK) $(FLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS)
+	gcc -g $(LIBFT)  $(FLAGS) $(OBJS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -o $@
@@ -51,18 +42,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	@rm -rf $(OBJ_DIR)
 	@make -C libft clean
-	@make -C stack clean
 
 fclean: clean
 	@rm -rf $(NAME)
 	@make -C libft fclean
-	@make -C stack fclean
 
 re: fclean all
 
 norm:
 	@make -C libft norm
-	@make -C stack norm
 	@norminette $(SRC_DIR) $(INC_DIR)
 
 .PHONY: all clean fclean re norm
