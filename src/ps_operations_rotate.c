@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_main.c                                          :+:      :+:    :+:   */
+/*   ps_operations_rotate.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/18 14:39:30 by semyonkomis      ###   ########.fr       */
+/*   Created: 2019/02/19 13:21:12 by semyonkomis       #+#    #+#             */
+/*   Updated: 2019/02/19 13:23:42 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		main(int argc, char **argv)
+void	rotate_a(t_stack **a)
 {
-	t_stack	*a;
+	ps_rotate(a);
+	write(1, "ra\n", 3);
+}
 
-	if (argc == 1 || !(a = make_stack(argc - 1, argv + 1)))	
-	{
-		write(1, "Error\n", 6);
-		return (1);
-	}
-	while (a)
-	{
-		printf("%d ", a->value);
-		a = a->next;
-	}
-	return (0);
+void	rotate_b(t_stack **b)
+{
+	ps_rotate(b);
+	write(1, "rb\n", 3);
+}
+
+void	rotate_ab(t_stack **a, t_stack **b)
+{
+	ps_rotate(a);
+	ps_rotate(b);
+	write(1, "rr\n", 3);
 }

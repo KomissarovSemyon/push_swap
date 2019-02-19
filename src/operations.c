@@ -6,12 +6,11 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:00:56 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/18 02:11:14 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/19 13:13:37 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "stack.h"
 
 t_stack	*ps_swap(t_stack **head)
 {
@@ -27,9 +26,9 @@ t_stack	*ps_swap(t_stack **head)
 	return (*head);
 }
 
-/*	
+/*
 **	from s1 to s2
-*/	
+*/
 
 int		ps_push(t_stack **s1, t_stack **s2)
 {

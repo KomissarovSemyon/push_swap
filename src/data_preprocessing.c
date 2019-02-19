@@ -6,7 +6,7 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/18 14:31:20 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/19 12:14:08 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static int	norm_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
+	if ((res > 2147483648 && sign == -1) || (res > 2147483647 && sign == 1))
+		return (0);
 	return (sign * res);
 }
 
