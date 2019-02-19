@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/18 14:39:30 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/19 21:31:57 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int		main(int argc, char **argv)
 {
-	t_stack	*a;
+	char	**nums;
 
+	if (argc == 2)
+	{
+		if (!(nums = ft_strsplit(argv[1], ' ')))
+			return (1);
+	}
 	if (argc == 1 || !(a = make_stack(argc - 1, argv + 1)))	
 	{
 		write(1, "Error\n", 6);
 		return (1);
-	}
-	while (a)
-	{
-		printf("%d ", a->value);
-		a = a->next;
 	}
 	return (0);
 }
