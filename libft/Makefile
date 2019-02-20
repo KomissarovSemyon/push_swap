@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
+#    By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 20:02:14 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/17 02:08:51 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/20 17:13:03 by semyonkomis      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,8 @@ SRC =	ft_strlen.c \
 		ft_chjoinstr.c \
 		ft_strjoinnch.c \
 		ft_nchjoinstr.c \
-		ft_strmjoin.c
+		ft_strmjoin.c \
+		ft_swap.c
 
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 

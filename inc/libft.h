@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 23:21:11 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/17 02:00:57 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/20 17:12:42 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int					ft_printf(const char *f, ...);
 **	void	ft_iloveyoupeer(void) : expressing my love for peer ^_^
 */
 
+void				swap(int *a, int *b);
 int					ft_iswhitespace(int c);
 int					ft_nbrlen(unsigned long long int nbr);
 int					ft_wordcount(const char *str, char del);
