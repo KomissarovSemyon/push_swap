@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/20 14:45:30 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 23:39:28 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ int		main(int argc, char **argv)
 	t_stacks	*stacks;
 
 	if (!(stacks = parse_input(argv + 1, argc - 1)))
+	{
+		write(1, "Error\n", 6);
 		return (1);
+	}
 	print_stacks(stacks);
+	printf("%d\n", find_median(stacks->a, stacks->la));
 	delete_stack(stacks);
 	return (0);
 }

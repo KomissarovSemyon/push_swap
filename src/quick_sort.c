@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quick_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 13:13:51 by semyonkomis       #+#    #+#             */
-/*   Updated: 2019/02/20 17:11:45 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 23:34:29 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	partition(int *arr, int low, int high)
 	return (i + 1); 
 } 
 
-void quick_sort(int *arr, int low, int high) 
+void	quick_sort(int *arr, int low, int high) 
 {
 	int	pi;
 
@@ -44,3 +44,15 @@ void quick_sort(int *arr, int low, int high)
 		quick_sort(arr, pi + 1, high); 
 	} 
 } 
+
+int		find_median(int *arr, int n)
+{
+	int	a[n];
+	int	i;
+	
+	i = -1;
+	while (++i < n)
+		a[i] = arr[n];
+	quick_sort(a, 0, n - 1);
+	return (arr[n / 2]);
+}

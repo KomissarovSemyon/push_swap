@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/20 15:02:23 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 23:39:00 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ t_stacks	*parse_input(char **arr, int n)
 	t_stacks	*res;
 	int			i;
 
+	if (!arr || !(*arr))
+		return (NULL);
 	res = create_stack(n);
 	i = -1;
 	while (++i < n)
