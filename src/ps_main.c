@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 22:30:10 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/20 14:45:30 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ int		main(int argc, char **argv)
 
 	if (!(stacks = parse_input(argv + 1, argc - 1)))
 		return (1);
+	print_stacks(stacks);
+	delete_stack(stacks);
 	return (0);
 }

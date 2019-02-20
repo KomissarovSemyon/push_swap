@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 03:41:29 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 22:28:57 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/20 14:45:08 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,8 @@ typedef struct	s_stacks
 }				t_stacks;
 
 t_stacks	*parse_input(char **arr, int n);
+t_stacks	*create_stack(int n);
+t_stacks	*delete_stack(t_stacks *stacks);
+void		print_stacks(t_stacks *stacks);
 
 #endif

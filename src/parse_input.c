@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/19 22:28:02 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/20 15:02:23 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,17 @@ static int	*rev_array(int *a, size_t n)
 
 t_stacks	*parse_input(char **arr, int n)
 {
-	(void)arr;
-	n = 0;
-	rev_array(NULL, 0);
-	norm_atoi("0");
-	return (NULL);
+	t_stacks	*res;
+	int			i;
+
+	res = create_stack(n);
+	i = -1;
+	while (++i < n)
+	{
+		res->a[i] = norm_atoi(arr[i]);
+		if (res->a[i] == 0 && arr[i][0] != '0')
+			return (delete_stack(res));
+	}
+	res->a = rev_array(res->a, res->la);
+	return (res);
 }
