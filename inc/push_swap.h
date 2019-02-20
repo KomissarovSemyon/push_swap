@@ -6,7 +6,7 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 03:41:29 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/20 14:45:08 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 18:16:28 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,16 @@ t_stacks	*parse_input(char **arr, int n);
 t_stacks	*create_stack(int n);
 t_stacks	*delete_stack(t_stacks *stacks);
 void		print_stacks(t_stacks *stacks);
+void		swap_a(t_stacks *stacks, int flag);
+void		swap_a(t_stacks *stacks, int flag);
+void		swap_ab(t_stacks *stacks, int flag);
+void		push_a(t_stacks *stacks, int flag);
+void		push_b(t_stacks *stacks, int flag);
+void		rotate_a(t_stacks *stacks, int flag);
+void		rotate_b(t_stacks *stacks, int flag);
+void		rotate_ab(t_stacks *stacks, int flag);
+void		rev_rotate_a(t_stacks *stacks, int flag);
+void		rev_rotate_b(t_stacks *stacks, int flag);
+void		rev_rotate_ab(t_stacks *stacks, int flag);
 
 #endif

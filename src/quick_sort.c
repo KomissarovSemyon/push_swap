@@ -6,20 +6,11 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 13:13:51 by semyonkomis       #+#    #+#             */
-/*   Updated: 2019/02/18 13:59:00 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 17:11:45 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-static void	swap(int *a, int *b)
-{
-	int	t;
-
-	t = *a;
-	*a = *b;
-	*b = t;
-}
 
 static int	partition(int *arr, int low, int high) 
 { 

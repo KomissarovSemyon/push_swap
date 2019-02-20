@@ -20,7 +20,11 @@ OBJ_DIR 	= ./obj
 
 SRC			=	ps_main.c \
 				parse_input.c \
-				quick_sort.c
+				quick_sort.c \
+				stacks.c \
+				stacks_ops1.c \
+				stacks_ops2.c \
+				stacks_ops3.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a

@@ -6,7 +6,7 @@
 #    By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 20:02:14 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/20 17:13:03 by semyonkomis      ###   ########.fr        #
+#    Updated: 2019/02/20 17:55:21 by semyonkomis      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,8 +128,5 @@ re: fclean all
 norm:
 	@echo "Checking norm"
 	@norminette $(SRC_DIR) $(INC_DIR)
-
-main:
-	gcc -g -Iinc main.c libft.a && ./a.out
 
 .PHONY: all clean fclean re norm
