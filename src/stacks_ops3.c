@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_ops3.c                                       :+:      :+:    :+:   */
+/*   stacks_ops3.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 17:45:05 by semyonkomis       #+#    #+#             */
-/*   Updated: 2019/02/20 18:09:02 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/20 18:28:42 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,5 @@ void	rev_rotate_ab(t_stacks *stacks, int flag)
 		stacks->b[i] = stacks->b[i - 1];
 	stacks->b[0] = t;
 	if (flag)
-		write(1, "rrb\n", 4);
+		write(1, "rrr\n", 4);
 }
