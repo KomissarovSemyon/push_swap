@@ -24,7 +24,7 @@ void	rev_rotate_a(t_stacks *stacks, int flag)
 	while (--i > 0)
 		stacks->a[i] = stacks->a[i - 1];
 	stacks->a[0] = t;
-	if (flag)
+	if (flag && TO_PRINT)
 		write(1, "rra\n", 4);
 }
 
@@ -40,7 +40,7 @@ void	rev_rotate_b(t_stacks *stacks, int flag)
 	while (--i > 0)
 		stacks->b[i] = stacks->b[i - 1];
 	stacks->b[0] = t;
-	if (flag)
+	if (flag && TO_PRINT)
 		write(1, "rrb\n", 4);
 }
 
@@ -61,6 +61,6 @@ void	rev_rotate_ab(t_stacks *stacks, int flag)
 	while (--i > 0)
 		stacks->b[i] = stacks->b[i - 1];
 	stacks->b[0] = t;
-	if (flag)
+	if (flag && TO_PRINT)
 		write(1, "rrr\n", 4);
 }

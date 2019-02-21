@@ -16,8 +16,6 @@
 # include "libft.h"
 # include <stdio.h> // DELETE THIS
 
-void	quick_sort(int *arr, int low, int high);
-
 /*
 **	all operations
 */
@@ -30,6 +28,9 @@ typedef struct	s_stacks
 	int			lb;
 }				t_stacks;
 
+# define TO_PRINT 0
+
+void		quick_sort(int *arr, int low, int high);
 t_stacks	*parse_input(char **arr, int n);
 t_stacks	*create_stack(int n);
 t_stacks	*delete_stack(t_stacks *stacks);

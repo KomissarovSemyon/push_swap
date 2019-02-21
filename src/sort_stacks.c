@@ -76,7 +76,7 @@ void	sort_a(t_stacks *s, int top)
 	int	*tmp_ptr;
 	int	tmp;
 
-	printf("sort a\n");
+	printf("\nsort a\n");
 	print_stacks(s);
 	if (top == 3)
 		sort_3_a(s);
@@ -104,7 +104,7 @@ void	sort_b(t_stacks *s, int top)
 	int	*tmp_ptr;
 	int	tmp;
 
-	printf("sort b\n");
+	printf("\nsort b\n");
 	print_stacks(s);
 	if (top == 3)
 		sort_3_b(s);

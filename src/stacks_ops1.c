@@ -23,7 +23,7 @@ void	swap_a(t_stacks *stacks, int flag)
 		tmp = stacks->a[stacks->la - 1];
 		stacks->a[stacks->la - 1] = stacks->a[stacks->la - 2];
 		stacks->a[stacks->la - 2] = tmp;
-		if (flag)
+		if (flag && TO_PRINT)
 			write(1, "sa\n", 3);
 	}
 }
@@ -39,7 +39,7 @@ void	swap_b(t_stacks *stacks, int flag)
 		tmp = stacks->b[stacks->lb - 1];
 		stacks->b[stacks->lb - 1] = stacks->b[stacks->lb - 2];
 		stacks->b[stacks->lb - 2] = tmp;
-		if (flag)
+		if (flag && TO_PRINT)
 			write(1, "sb\n", 3);
 	}
 }
@@ -58,7 +58,7 @@ void	swap_ab(t_stacks *stacks, int flag)
 		tmp = stacks->b[stacks->lb - 1];
 		stacks->b[stacks->lb - 1] = stacks->b[stacks->lb - 2];
 		stacks->b[stacks->lb - 2] = tmp;
-		if (flag)
+		if (flag && TO_PRINT)
 			write(1, "ss\n", 3);
 	}
 }
@@ -70,7 +70,7 @@ void	push_a(t_stacks *stacks, int flag)
 	stacks->a[stacks->la] = stacks->b[stacks->lb - 1];
 	stacks->lb--;
 	stacks->la++;
-	if (flag)
+	if (flag && TO_PRINT)
 		write(1, "pa\n", 3);
 }
 
@@ -81,6 +81,6 @@ void	push_b(t_stacks *stacks, int flag)
 	stacks->b[stacks->lb] = stacks->a[stacks->la - 1];
 	stacks->la--;
 	stacks->lb++;
-	if (flag)
+	if (flag && TO_PRINT)
 		write(1, "pb\n", 3);
 }
