@@ -24,7 +24,8 @@ SRC			=	ps_main.c \
 				stacks.c \
 				stacks_ops1.c \
 				stacks_ops2.c \
-				stacks_ops3.c
+				stacks_ops3.c \
+				sort_3.c
 
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 LIBFT		= $(LIBFT_DIR)/libft.a

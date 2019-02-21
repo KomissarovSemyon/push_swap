@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/20 23:39:28 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/21 15:19:35 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int		main(int argc, char **argv)
 		return (1);
 	}
 	print_stacks(stacks);
-	printf("%d\n", find_median(stacks->a, stacks->la));
+	printf("--------------\n");
+	sort_3(stacks);
+	printf("--------------\n");
+	print_stacks(stacks);
 	delete_stack(stacks);
 	return (0);
 }
