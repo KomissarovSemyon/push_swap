@@ -61,3 +61,33 @@ void		print_stacks(t_stacks *stacks)
 		ft_putstr("empty");
 	ft_putendl("");
 }
+
+int			sorted(t_stacks *s)
+{
+	int		i;
+
+	if (!s || s->lb)
+		return (0);
+	i = 0;
+	while (++i < s->la)
+		if (s->a[i - 1] > s->a[i])
+			return (0);
+	return (1);
+}
+
+int			get_positions(int a, int b, int c)
+{
+	if (a > b && b > c)
+		return (0);
+	if (a > c && c > b)
+		return (1);
+	if (b > a && a > c)
+		return (2);
+	if (c > a && a > b)
+		return (3);
+	if (b > c && c > a)
+		return (4);
+	if (c > b && b > a)
+		return (5);
+	return (-1);
+}

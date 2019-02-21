@@ -23,7 +23,7 @@ int		main(int argc, char **argv)
 	}
 	print_stacks(stacks);
 	printf("--------------\n");
-	sort_3(stacks);
+	sort_a(stacks, stacks->la);
 	printf("--------------\n");
 	print_stacks(stacks);
 	delete_stack(stacks);

@@ -53,6 +53,20 @@ static int	*rev_array(int *a, size_t n)
 	return (a);
 }
 
+static int	check_dup(int *arr, int n)
+{
+	int	a[n];
+	int	i;
+
+	ft_memcpy(a, arr, n * sizeof(int));
+	quick_sort(a, 0, n - 1);
+	i = 0;
+	while (++i < n)
+		if (a[i - 1] == a[i])
+			return (0);
+	return (1);
+}
+
 t_stacks	*parse_input(char **arr, int n)
 {
 	t_stacks	*res;
@@ -69,5 +83,10 @@ t_stacks	*parse_input(char **arr, int n)
 			return (delete_stack(res));
 	}
 	res->a = rev_array(res->a, res->la);
+	if (!check_dup(res->a, res->la))
+	{
+		delete_stack(res);
+		return (NULL);
+	}
 	return (res);
 }

@@ -48,11 +48,8 @@ void	quick_sort(int *arr, int low, int high)
 int		find_median(int *arr, int n)
 {
 	int	a[n];
-	int	i;
-	
-	i = -1;
-	while (++i < n)
-		a[i] = arr[n];
+
+	ft_memcpy(a, arr, n * sizeof(int));
 	quick_sort(a, 0, n - 1);
-	return (arr[n / 2]);
+	return (a[n / 2]);
 }
