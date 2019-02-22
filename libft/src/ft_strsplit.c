@@ -31,23 +31,10 @@ static int		ft_strlendel(char const *s, char c)
 	return (res);
 }
 
-static	void	ft_freeall(char ***res)
-{
-	int	i;
-
-	if (!res || !(*res))
-		return ;
-	i = -1;
-	while ((*res)[++i])
-		free((*res)[i]);
-	free(*res);
-	*res = NULL;
-}
-
 static void		ft_movenext(char **now, char c, char ***res, int j)
 {
 	if (!((*res)[j] = ft_strsub(*now, 0, ft_strlendel(*now, c))))
-		ft_freeall(res);
+		ft_deldoublearr(res);
 	*now = ft_nextword(*now, c);
 }
 

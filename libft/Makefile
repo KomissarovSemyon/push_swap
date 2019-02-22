@@ -97,7 +97,8 @@ SRC =	ft_strlen.c \
 		ft_strjoinnch.c \
 		ft_nchjoinstr.c \
 		ft_strmjoin.c \
-		ft_swap.c
+		ft_swap.c \
+		ft_deldoublearr.c
 
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 

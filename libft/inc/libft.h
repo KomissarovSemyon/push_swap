@@ -131,6 +131,7 @@ char				*ft_chjoinstr(char c, char **str, int flag);
 char				*ft_strjoinnch(char **str, char c, int n, int flag);
 char				*ft_nchjoinstr(char c, int n, char **str, int flag);
 char				*ft_mstrjoin(char **s1, char **s2, int flag);
+void				ft_deldoublearr(char ***res);
 
 # define BUFF_SIZE 32
 

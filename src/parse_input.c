@@ -67,6 +67,35 @@ static int	check_dup(int *arr, int n)
 	return (1);
 }
 
+static t_stacks	*parse_first_arg(char *s)
+{
+	t_stacks	*res;
+	char		**tmp;
+	int			i;
+
+	if (!(tmp = ft_strsplit(s, ' ')))
+		return (NULL);
+	i = 0;
+	while (tmp[i])
+		i++;
+	res = create_stack(i);
+	i = -1;
+	while (tmp[++i])
+	{
+		res->a[i] = norm_atoi(tmp[i]);
+		if (res->a[i] == 0 && tmp[i][0] != '0')
+			return (delete_stack(res));
+	}
+	res->a = rev_array(res->a, res->la);
+	if (!check_dup(res->a, res->la))
+	{
+		delete_stack(res);
+		return (NULL);
+	}
+	ft_deldoublearr(&tmp);
+	return (res);
+}
+
 t_stacks	*parse_input(char **arr, int n)
 {
 	t_stacks	*res;
@@ -74,6 +103,8 @@ t_stacks	*parse_input(char **arr, int n)
 
 	if (!arr || !(*arr))
 		return (NULL);
+	if (n == 1)
+		return (parse_first_arg(arr[0]));
 	res = create_stack(n);
 	i = -1;
 	while (++i < n)
