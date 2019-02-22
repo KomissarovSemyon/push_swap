@@ -28,7 +28,7 @@ typedef struct	s_stacks
 	int			lb;
 }				t_stacks;
 
-# define TO_PRINT 0
+# define TO_PRINT 1
 
 void		quick_sort(int *arr, int low, int high);
 t_stacks	*parse_input(char **arr, int n);

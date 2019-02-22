@@ -23,21 +23,14 @@ int		divide_a(t_stacks *s)
 	res = 0;
 	while (--i >= 0)
 	{
-		if (s->a[s->la - 1] > med)
+		if (s->a[s->la - 1] >= med)
 		{
 			res++;
 			push_b(s, 1);
 		}
 		else if (s->a[s->la - 1] < med)
 			rotate_a(s, 1);
-		else
-		{
-			res++;
-			push_b(s, 1);
-			rotate_b(s, 1);
-		}
 	}
-	rev_rotate_b(s, 1);
 	return (res);
 }
 
@@ -52,21 +45,14 @@ int		divide_b(t_stacks *s)
 	res = 0;
 	while (--i >= 0)
 	{
-		if (s->b[s->lb - 1] < med)
+		if (s->b[s->lb - 1] <= med)
 		{
 			res++;
 			push_a(s, 1);
 		}
 		else if (s->b[s->lb - 1] > med)
 			rotate_b(s, 1);
-		else
-		{
-			res++;
-			push_a(s, 1);
-			rotate_a(s, 1);
-		}
 	}
-	rev_rotate_a(s, 1);
 	return (res);
 }
 
@@ -76,8 +62,6 @@ void	sort_a(t_stacks *s, int top)
 	int	*tmp_ptr;
 	int	tmp;
 
-	printf("\nsort a\n");
-	print_stacks(s);
 	if (top == 3)
 		sort_3_a(s);
 	else if (top == 2)
@@ -104,8 +88,6 @@ void	sort_b(t_stacks *s, int top)
 	int	*tmp_ptr;
 	int	tmp;
 
-	printf("\nsort b\n");
-	print_stacks(s);
 	if (top == 3)
 		sort_3_b(s);
 	else if (top == 2)

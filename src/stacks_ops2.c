@@ -19,11 +19,11 @@ void	rotate_a(t_stacks *stacks, int flag)
 
 	if (!stacks)
 		return ;
-	t = stacks->a[0];
-	i = 0;
-	while (++i < stacks->la)
-		stacks->a[i - 1] = stacks->a[i];
-	stacks->a[i - 1] = t;
+	i = stacks->la;
+	t = stacks->a[stacks->la - 1];
+	while (--i > 0)
+		stacks->a[i] = stacks->a[i - 1];
+	stacks->a[0] = t;
 	if (flag && TO_PRINT)
 		write(1, "ra\n", 3);
 }
@@ -35,11 +35,11 @@ void	rotate_b(t_stacks *stacks, int flag)
 
 	if (!stacks)
 		return ;
-	t = stacks->b[0];
-	i = 0;
-	while (++i < stacks->lb)
-		stacks->b[i - 1] = stacks->b[i];
-	stacks->b[i - 1] = t;
+	i = stacks->lb;
+	t = stacks->b[stacks->lb - 1];
+	while (--i > 0)
+		stacks->b[i] = stacks->b[i - 1];
+	stacks->b[0] = t;
 	if (flag && TO_PRINT)
 		write(1, "rb\n", 3);
 }
@@ -51,16 +51,16 @@ void	rotate_ab(t_stacks *stacks, int flag)
 
 	if (!stacks)
 		return ;
-	t = stacks->b[0];
-	i = 0;
-	while (++i < stacks->lb)
-		stacks->b[i - 1] = stacks->b[i];
-	stacks->a[i - 1] = t;
-	t = stacks->a[0];
-	i = 0;
-	while (++i < stacks->la)
-		stacks->a[i - 1] = stacks->a[i];
-	stacks->b[i - 1] = t;
+	i = stacks->la;
+	t = stacks->a[stacks->la - 1];
+	while (--i > 0)
+		stacks->a[i] = stacks->a[i - 1];
+	stacks->a[0] = t;
+	i = stacks->lb;
+	t = stacks->b[stacks->lb - 1];
+	while (--i > 0)
+		stacks->b[i] = stacks->b[i - 1];
+	stacks->b[0] = t;
 	if (flag && TO_PRINT)
 		write(1, "rr\n", 3);
 }
