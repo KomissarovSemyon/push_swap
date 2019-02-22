@@ -100,7 +100,7 @@ static int		make_return_value(t_list *file, t_list **head,
 	return (ft_lstdelfile(head, file->content_size));
 }
 
-int				get_next_line(const int fd, char **line)
+int				ft_gnl(const int fd, char **line)
 {
 	static t_list	*head;
 	t_list			*file;

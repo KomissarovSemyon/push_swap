@@ -10,27 +10,34 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= push_swap
-FLAGS		= -Wall -Werror -Wextra
+NAME			= push_swap
+NAME_PS			= push_swap
+NAME_CHECKER	= checker
+FLAGS			= -Wall -Werror -Wextra
 
-LIBFT_DIR	= ./libft
-SRC_DIR 	= ./src
-INC_DIR 	= ./inc
-OBJ_DIR 	= ./obj
+LIBFT_DIR		= ./libft
+SRC_DIR 		= ./src
+INC_DIR 		= ./inc
+OBJ_DIR 		= ./obj
 
-SRC			=	ps_main.c \
-				parse_input.c \
-				quick_sort.c \
-				stacks.c \
-				stacks_ops1.c \
-				stacks_ops2.c \
-				stacks_ops3.c \
-				sort_stacks.c \
-				sort_last_a.c \
-				sort_last_b.c
+SRC				=	parse_input.c \
+					quick_sort.c \
+					stacks.c \
+					stacks_ops1.c \
+					stacks_ops2.c \
+					stacks_ops3.c \
+					sort_stacks.c \
+					sort_last_a.c \
+					sort_last_b.c \
+					parse_commands.c
 
-OBJS		= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
-LIBFT		= $(LIBFT_DIR)/libft.a
+PUSH_SWAP		=	ps_main.c
+CHECKER			=	checker_main.c
+
+OBJS			= $(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
+PUSH_SWAP_OBJ	= $(addprefix $(OBJ_DIR)/,$(PUSH_SWAP:%.c=%.o))
+CHECKER_OBJ		= $(addprefix $(OBJ_DIR)/,$(CHECKER:%.c=%.o))
+LIBFT			= $(LIBFT_DIR)/libft.a
 
 all: $(NAME)
 
@@ -38,10 +45,11 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 $(LIBFT):
-	@make -C libft
+	make -C libft
 
-$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS)
-	gcc -g $(LIBFT)  $(FLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS) $(PUSH_SWAP_OBJ) $(CHECKER_OBJ)
+	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(PUSH_SWAP_OBJ) -o $(NAME_PS)
+	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(CHECKER_OBJ) -o $(NAME_CHECKER)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -o $@

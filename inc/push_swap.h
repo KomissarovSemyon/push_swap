@@ -37,6 +37,7 @@ t_stacks	*delete_stack(t_stacks *stacks);
 void		print_stacks(t_stacks *stacks);
 int			find_median(int *arr, int n);
 int			get_positions(int a, int b, int c);
+int			sorted(t_stacks *s);
 void		sort_2_a(t_stacks *s);
 void		sort_3_a(t_stacks *s);
 void		sort_2_b(t_stacks *s);
@@ -45,6 +46,8 @@ void		sort_a(t_stacks *s, int top);
 void		sort_b(t_stacks *s, int top);
 int			divide_a(t_stacks *s);
 int			divide_b(t_stacks *s);
+
+void		parse_commands(t_stacks *s);
 
 void		swap_a(t_stacks *stacks, int flag);
 void		swap_b(t_stacks *stacks, int flag);
