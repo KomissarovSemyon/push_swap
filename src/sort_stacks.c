@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:44:31 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/21 20:02:51 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/25 02:17:06 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int		divide_a(t_stacks *s)
 	int med;
 	int	i;
 	int	res;
+	int	rotates;
 
 	i = s->la;
 	med = find_median(s->a, i);
 	res = 0;
+	rotates = 0;
 	while (--i >= 0)
 	{
 		if (s->a[s->la - 1] >= med)
@@ -29,8 +31,13 @@ int		divide_a(t_stacks *s)
 			push_b(s, 1);
 		}
 		else if (s->a[s->la - 1] < med)
+		{
+			rotates++;
 			rotate_a(s, 1);
+		}
 	}
+	while (rotates-- > 0)
+		rev_rotate_a(s, 1);
 	return (res);
 }
 
@@ -39,10 +46,12 @@ int		divide_b(t_stacks *s)
 	int med;
 	int	i;
 	int	res;
+	int	rotates;
 
 	i = s->lb;
 	med = find_median(s->b, i);
 	res = 0;
+	rotates = 0;
 	while (--i >= 0)
 	{
 		if (s->b[s->lb - 1] < med)
@@ -51,8 +60,13 @@ int		divide_b(t_stacks *s)
 			push_a(s, 1);
 		}
 		else if (s->b[s->lb - 1] >= med)
+		{
+			rotates++;
 			rotate_b(s, 1);
+		}
 	}
+	while (rotates-- > 0)
+		rev_rotate_b(s, 1);
 	return (res);
 }
 
