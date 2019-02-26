@@ -6,7 +6,7 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:44:31 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/25 02:17:06 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/26 14:19:27 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ void	sort_a(t_stacks *s, int top)
 	{
 		t = divide_a(s);
 		sort_a(s, s->la);
-
 		tmp_ptr = s->b;
 		tmp = s->lb;
 		s->b = tmp_ptr + (tmp - t);
@@ -111,7 +110,6 @@ void	sort_b(t_stacks *s, int top)
 	{
 		t = divide_b(s);
 		sort_b(s, s->lb);
-
 		tmp_ptr = s->a;
 		tmp = s->la;
 		s->a = tmp_ptr + (tmp - t);

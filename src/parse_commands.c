@@ -6,7 +6,7 @@
 /*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 20:31:21 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/25 03:26:33 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/26 14:18:43 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ static int	exec_cmd(t_stacks *s, char *str)
 		rev_rotate_ab(s, 0);
 	else
 		return (0);
-	// printf("-------%s--------\n", str);
-	// print_stacks(s);
 	return (1);
 }
 
@@ -58,9 +56,6 @@ void	parse_commands(t_stacks *s)
 		}
 		free(line);
 	}
-	// printf("------------------\n");
-	// print_stacks(s);
-	// printf("------------------\n");
 	if (status == -1)
 		write(1, "KO\n", 3);
 	else if (sorted(s))

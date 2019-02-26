@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/21 15:19:35 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/26 14:19:02 by semyonkomis      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ int		main(int argc, char **argv)
 		return (1);
 	}
 	sort_a(stacks, stacks->la);
-	// printf("-----------------\n");
-	// print_stacks(stacks);
-	// printf("-----------------\n");
 	delete_stack(stacks);
 	return (0);
 }
