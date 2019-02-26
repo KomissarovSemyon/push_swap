@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+         #
+#    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 20:02:14 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/20 17:55:21 by semyonkomis      ###   ########.fr        #
+#    Updated: 2019/02/26 18:45:42 by amerlon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

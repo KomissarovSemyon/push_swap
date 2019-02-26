@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks_ops2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 16:53:21 by semyonkomis       #+#    #+#             */
-/*   Updated: 2019/02/20 17:58:51 by semyonkomis      ###   ########.fr       */
+/*   Created: 2019/02/20 16:53:21 by amerlon-          #+#    #+#             */
+/*   Updated: 2019/02/26 18:41:44 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

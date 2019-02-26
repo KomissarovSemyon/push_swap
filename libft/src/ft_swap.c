@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/20 17:11:52 by semyonkomis       #+#    #+#             */
-/*   Updated: 2019/02/20 17:12:08 by semyonkomis      ###   ########.fr       */
+/*   Created: 2019/02/20 17:11:52 by amerlon-          #+#    #+#             */
+/*   Updated: 2019/02/26 18:46:24 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

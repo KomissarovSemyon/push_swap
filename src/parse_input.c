@@ -6,13 +6,13 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/20 23:39:00 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/26 18:47:46 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	norm_atoi(const char *str)
+static int		norm_atoi(const char *str)
 {
 	unsigned int	res;
 	int				sign;
@@ -36,7 +36,7 @@ static int	norm_atoi(const char *str)
 	return (sign * res);
 }
 
-static int	*rev_array(int *a, size_t n)
+static int		*rev_array(int *a, size_t n)
 {
 	int		tmp;
 	size_t	i;
@@ -53,7 +53,7 @@ static int	*rev_array(int *a, size_t n)
 	return (a);
 }
 
-static int	check_dup(int *arr, int n)
+static int		check_dup(int *arr, int n)
 {
 	int	a[n];
 	int	i;
@@ -96,7 +96,7 @@ static t_stacks	*parse_first_arg(char *s)
 	return (res);
 }
 
-t_stacks	*parse_input(char **arr, int n)
+t_stacks		*parse_input(char **arr, int n)
 {
 	t_stacks	*res;
 	int			i;

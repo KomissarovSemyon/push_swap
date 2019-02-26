@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 18:30:50 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 14:18:51 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/26 18:40:52 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:44:31 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 14:19:27 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/26 18:40:07 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	sort_a(t_stacks *s, int top)
 		sort_3_a(s);
 	else if (top == 2)
 		sort_2_a(s);
-	else if (top > 3) 
+	else if (top > 3)
 	{
 		t = divide_a(s);
 		sort_a(s, s->la);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_commands.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+        */
+/*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 20:31:21 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 14:18:43 by semyonkomis      ###   ########.fr       */
+/*   Updated: 2019/02/26 18:47:19 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	exec_cmd(t_stacks *s, char *str)
 {
-
 	if (!ft_strcmp(str, "sa"))
 		swap_a(s, 0);
 	else if (!ft_strcmp(str, "sb"))
@@ -42,7 +41,7 @@ static int	exec_cmd(t_stacks *s, char *str)
 	return (1);
 }
 
-void	parse_commands(t_stacks *s)
+void		parse_commands(t_stacks *s)
 {
 	char	*line;
 	int		status;
