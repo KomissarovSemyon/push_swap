@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:44:31 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:40:07 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/26 21:25:32 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int		divide_a(t_stacks *s)
 	rotates = 0;
 	while (--i >= 0)
 	{
-		if (s->a[s->la - 1] >= med)
+		if (s->a[s->la - 1] < med)
 		{
 			res++;
 			push_b(s, 1);
 		}
-		else if (s->a[s->la - 1] < med)
+		else if (s->a[s->la - 1] >= med)
 		{
 			rotates++;
 			rotate_a(s, 1);
@@ -54,12 +54,12 @@ int		divide_b(t_stacks *s)
 	rotates = 0;
 	while (--i >= 0)
 	{
-		if (s->b[s->lb - 1] < med)
+		if (s->b[s->lb - 1] >= med)
 		{
 			res++;
 			push_a(s, 1);
 		}
-		else if (s->b[s->lb - 1] >= med)
+		else if (s->b[s->lb - 1] < med)
 		{
 			rotates++;
 			rotate_b(s, 1);

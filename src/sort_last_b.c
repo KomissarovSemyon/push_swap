@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/21 19:41:36 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:40:02 by amerlon-         ###   ########.fr       */
+/*   Created: 2019/02/21 13:58:49 by amerlon-          #+#    #+#             */
+/*   Updated: 2019/02/26 21:27:50 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ void		sort_3_b(t_stacks *s)
 	if (!s)
 		return ;
 	pos = get_positions(s->b[s->lb - 1], s->b[s->lb - 2], s->b[s->lb - 3]);
-	if (pos == 0 || pos == 1 || pos == 3)
+	if (pos == 5 || pos == 4 || pos == 2)
 		swap_b(s, 1);
-	if (pos == 0 || pos == 1 || pos == 2 || pos == 4)
+	if (pos == 5 || pos == 4 || pos == 3 || pos == 1)
 		swap_basic(s);
-	if (pos == 0 || pos == 2)
+	if (pos == 5 || pos == 3)
 		swap_b(s, 1);
 }
 
 void		sort_2_b(t_stacks *s)
 {
-	if (s->b[s->lb - 1] > s->b[s->lb - 2])
+	if (s->b[s->lb - 1] < s->b[s->lb - 2])
 		swap_b(s, 1);
 }

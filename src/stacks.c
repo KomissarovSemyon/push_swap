@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 11:53:24 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:40:18 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/26 21:16:51 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int			sorted(t_stacks *s)
 		return (0);
 	i = 0;
 	while (++i < s->la)
-		if (s->a[i - 1] > s->a[i])
+		if (s->a[i - 1] < s->a[i])
 			return (0);
 	return (1);
 }
