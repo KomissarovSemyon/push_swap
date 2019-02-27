@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+         #
+#    By: semyonkomissarov <semyonkomissarov@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/21 20:02:14 by amerlon-          #+#    #+#              #
-#    Updated: 2019/02/26 18:45:42 by amerlon-         ###   ########.fr        #
+#    Updated: 2019/02/27 13:52:43 by semyonkomis      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,11 +114,10 @@ $(NAME): $(OBJS)
 	@echo "\033[34mIndexing library\033[0m"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	gcc -g -Wall -Werror -Wextra -c $< -I$(INC_DIR) -o $@
+	@gcc -g -Wall -Werror -Wextra -c $< -I$(INC_DIR) -o $@
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "\033[34mDeleting library binaries\033[0m"
 
 fclean: clean
 	@rm -f $(NAME)

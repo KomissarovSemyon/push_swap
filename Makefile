@@ -42,24 +42,30 @@ LIBFT			= $(LIBFT_DIR)/libft.a
 all: $(NAME)
 
 $(OBJ_DIR):
+	@echo "\033[33mMaking binaries\033[0m"
 	@mkdir -p $(OBJ_DIR)
 
 $(LIBFT):
-	make -C libft
+	@make -C libft
 
 $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS) $(PUSH_SWAP_OBJ) $(CHECKER_OBJ)
-	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(PUSH_SWAP_OBJ) -o $(NAME_PS)
-	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(CHECKER_OBJ) -o $(NAME_CHECKER)
+	@echo "\033[33mCompiling ./push_swap\033[0m"
+	@gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(PUSH_SWAP_OBJ) -o $(NAME_PS)
+	@echo "\033[33mCompiling ./checker\033[0m"
+	@gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(CHECKER_OBJ) -o $(NAME_CHECKER)
+	@echo "\033[31mFinished building project\033[0m"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -o $@
+	@gcc -g $(FLAGS) -c $< -I$(INC_DIR) -o $@
 
 clean:
 	@rm -rf $(OBJ_DIR)
+	@echo "\033[33mDeleting project binaries\033[0m"
 	@make -C libft clean
 
 fclean: clean
 	@rm -rf $(NAME)
+	@echo "\033[33mDeleting project\033[0m"
 	@make -C libft fclean
 
 re: fclean all
