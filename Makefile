@@ -29,7 +29,8 @@ SRC				=	parse_input.c \
 					sort_stacks.c \
 					sort_last_a.c \
 					sort_last_b.c \
-					parse_commands.c
+					parse_commands.c \
+					sort_small.c
 
 PUSH_SWAP		=	ps_main.c
 CHECKER			=	checker_main.c

@@ -6,13 +6,13 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:44:31 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 21:25:32 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/27 21:40:04 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		divide_a(t_stacks *s)
+int		divide_a(t_stacks *s, int flag_small)
 {
 	int med;
 	int	i;
@@ -36,7 +36,7 @@ int		divide_a(t_stacks *s)
 			rotate_a(s, 1);
 		}
 	}
-	while (rotates-- > 0)
+	while (rotates-- > 0 && !flag_small)
 		rev_rotate_a(s, 1);
 	return (res);
 }
@@ -82,7 +82,7 @@ void	sort_a(t_stacks *s, int top)
 		sort_2_a(s);
 	else if (top > 3)
 	{
-		t = divide_a(s);
+		t = divide_a(s, 0);
 		sort_a(s, s->la);
 		tmp_ptr = s->b;
 		tmp = s->lb;

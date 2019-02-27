@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 05:39:45 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 21:13:37 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/27 21:35:47 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int argc, char **argv)
 			return (1);
 		}
 		if (!sorted(stacks))
-			sort_a(stacks, stacks->la);
+			stacks->la > 6 ? sort_a(stacks, stacks->la) : sort_small(stacks);
 		delete_stack(stacks);
 	}
 	return (0);

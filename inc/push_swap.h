@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 03:41:29 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:49:09 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/02/27 21:39:28 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void			sort_2_b(t_stacks *s);
 void			sort_3_b(t_stacks *s);
 void			sort_a(t_stacks *s, int top);
 void			sort_b(t_stacks *s, int top);
-int				divide_a(t_stacks *s);
+void			sort_small(t_stacks *s);
+int				divide_a(t_stacks *s, int flag_small);
 int				divide_b(t_stacks *s);
 
 void			parse_commands(t_stacks *s);
