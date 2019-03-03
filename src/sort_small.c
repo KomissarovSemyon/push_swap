@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/27 20:51:26 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/27 21:40:13 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/03/03 18:07:54 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	sort_small(t_stacks *s)
 		sort_2_b(s);
 	if (s->la == 3)
 		sort_3_a_last(s);
-	if (s->lb == 2)
+	if (s->lb == 3)
 		sort_3_b_last(s);
 	while (i-- > 0)
 		push_a(s, 1);
