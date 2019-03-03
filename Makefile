@@ -65,7 +65,8 @@ clean:
 	@make -C libft clean
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(NAME_PS)
+	@rm -rf $(NAME_CHECKER)
 	@echo "\033[33mDeleting project\033[0m"
 	@make -C libft fclean
 
