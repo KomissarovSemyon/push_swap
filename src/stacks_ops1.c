@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 15:32:48 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:49:02 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/03/06 20:57:00 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	swap_ab(t_stacks *stacks, int flag)
 
 void	push_a(t_stacks *stacks, int flag)
 {
-	if (!stacks || !(stacks->lb))
+	if (!stacks || stacks->lb < 1)
 		return ;
 	stacks->a[stacks->la] = stacks->b[stacks->lb - 1];
 	stacks->lb--;
@@ -76,7 +76,7 @@ void	push_a(t_stacks *stacks, int flag)
 
 void	push_b(t_stacks *stacks, int flag)
 {
-	if (!stacks || !(stacks->la))
+	if (!stacks || stacks->la < 1)
 		return ;
 	stacks->b[stacks->lb] = stacks->a[stacks->la - 1];
 	stacks->la--;

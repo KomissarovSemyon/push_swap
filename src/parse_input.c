@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 06:03:18 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:47:46 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/03/06 21:22:52 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,11 @@ static t_stacks	*parse_first_arg(char *s)
 	{
 		res->a[i] = norm_atoi(tmp[i]);
 		if (res->a[i] == 0 && tmp[i][0] != '0')
-			return (delete_stack(res));
+			return (ft_deldoublearr(&tmp) + delete_stack(res));
 	}
 	res->a = rev_array(res->a, res->la);
 	if (!check_dup(res->a, res->la))
-	{
-		delete_stack(res);
-		return (NULL);
-	}
+		return (ft_deldoublearr(&tmp) + delete_stack(res));
 	ft_deldoublearr(&tmp);
 	return (res);
 }

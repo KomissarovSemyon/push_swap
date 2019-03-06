@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 16:53:21 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 18:41:44 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/03/06 20:59:12 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rotate_a(t_stacks *stacks, int flag)
 	int	i;
 	int	t;
 
-	if (!stacks)
+	if (!stacks || stacks->la < 1)
 		return ;
 	i = stacks->la;
 	t = stacks->a[stacks->la - 1];
@@ -33,7 +33,7 @@ void	rotate_b(t_stacks *stacks, int flag)
 	int	i;
 	int	t;
 
-	if (!stacks)
+	if (!stacks || stacks->lb < 1)
 		return ;
 	i = stacks->lb;
 	t = stacks->b[stacks->lb - 1];
@@ -49,7 +49,7 @@ void	rotate_ab(t_stacks *stacks, int flag)
 	int	i;
 	int	t;
 
-	if (!stacks)
+	if (!stacks || stacks->lb < 1 || stacks->la < 1)
 		return ;
 	i = stacks->la;
 	t = stacks->a[stacks->la - 1];

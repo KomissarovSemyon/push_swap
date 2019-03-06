@@ -6,7 +6,7 @@
 /*   By: amerlon- <amerlon-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 20:31:21 by amerlon-          #+#    #+#             */
-/*   Updated: 2019/02/26 19:58:42 by amerlon-         ###   ########.fr       */
+/*   Updated: 2019/03/06 21:05:56 by amerlon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void		parse_commands(t_stacks *s)
 		}
 		free(line);
 	}
+	free(line);
 	if (status == -1)
 		write(1, "Error\n", 6);
 	else if (sorted(s))
